@@ -5,6 +5,18 @@ figure {
 	float: left;
 	display: block;
 	margin: 0;
+
+	@include break() {
+		width: inherit;
+		height: 140px;
+		float: none;
+		background-position: center;
+	}
+
+	@include break($device-phone) {
+		background-size: contain;
+		height: 100px;
+	}
 }
 
 nav {
@@ -13,14 +25,39 @@ nav {
 	float: left;
 	text-align: right;
 
+	@include break() {
+		width: inherit;
+		height: 50px;
+		float: none;
+		text-align: center;
+	}
+
+	@include break($device-phone) {
+		margin-bottom: 40px !important;
+	}
+
 	ul {
 		list-style-type: none;
 		margin-top: 95px;
+
+		@include break() {
+			margin-top: 0;
+		}
 
 		li {
 			display: inline;
 			font-size: 0.8em;
 			margin-right: 10px;
+
+			@include break() {
+				font-size: 1em;
+				margin: 0 10px;
+			}
+
+			@include break($device-tablet) {
+				font-size: 0.8em;
+				margin: 0 5px;
+			}
 
 			a {
 				color: $orange;

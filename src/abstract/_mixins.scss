@@ -1,0 +1,6 @@
+// Media Query Mixin
+@mixin break($width: 959px) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
