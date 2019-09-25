@@ -16,6 +16,9 @@ footer {
 	}
 }
 
+
+$social-count: one, two, three, four;
+
 .social-media {
 	margin: 0 auto;
 	width: 165px;
@@ -33,21 +36,12 @@ footer {
 	}
 	
 	div {
+		@each $count in $social-count {
+			$i: index($list: $social-count, $value: $count);
 
-		&.one {
-			background: $social 0 0;
-		}
-		
-		&.two {
-			background: $social -38px 0;
-		}
-		
-		&.three {
-			background: $social -76px 0;
-		}
-		
-		&.four {
-			background: $social -114px 0;
+			&.#{$count} {
+				background: $social-img #{($i - 1) * -38}px 0;
+			}
 		}
 	}
 }
