@@ -1,6 +1,6 @@
 header {
 	@include height-width(null, inherit);
-	clear: both;
+	@include float-clear(null, both);
 	text-align: center;
 	@include margin-padding(null, 40px 0 0 0);
 	
@@ -124,11 +124,11 @@ header {
 	
 	#products {
 		@include height-width(null, $device-phone + 1);
-		float: left;
+		@include float-clear(left);
 	}
 	
 	#products img {
-		float: left;
+		@include float-clear(left);
 		margin-right: 20px;
 	}
 	
@@ -142,7 +142,7 @@ header {
 	
 	#testimonials {
 		@include height-width(null, $device-phone + 1);
-		float: right;
+		@include float-clear(right);
 	}
 	
 	#products, #testimonials {
@@ -153,8 +153,8 @@ header {
 		
 		@include break($device-tablet) {
 			@include height-width(null, 96%);
-			@include margin-padding(0 2%, null);			
-			float: none;
+			@include margin-padding(0 2%, null);
+			@include float-clear(none);
 		}
 	}
 }
@@ -162,7 +162,7 @@ header {
 .greybar {
 	@include height-width(90px, 100%);
 	background: $white-2;
-	clear: both;
+	@include float-clear(null, both);
 	@include margin-padding(null, 30px 0 0 0);
 }
 

@@ -9,7 +9,7 @@ footer {
 		text-align: center;
 
 		p, img {
-			float: none;
+			@include float-clear(none);
 			@include margin-padding(0, null);
 		}
 	}
@@ -23,7 +23,7 @@ $social-count: one, two, three, four;
 	@include height-width(null, 165px);
 	
 	div {
-		float: left;
+		@include float-clear(left);
 		@include margin-padding(0 5px 0 0, null);
 	}
 	

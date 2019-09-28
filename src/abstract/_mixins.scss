@@ -16,3 +16,9 @@
 	margin: $margin;
 	padding: $padding;
 }
+
+// Float Clear Mixin
+@mixin float-clear($float: null, $clear: null) {
+	float: $float;
+	clear: $clear;
+}

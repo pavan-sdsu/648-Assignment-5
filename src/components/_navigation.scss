@@ -1,13 +1,13 @@
 figure {
 	@include height-width(190px, 400px);
 	background: $logo no-repeat 0 50px;
-	float: left;
+	@include float-clear(left);
 	display: block;
 	@include margin-padding(0, null);
 
 	@include break() {
 		@include height-width(140px, inherit);
-		float: none;
+		@include float-clear(none);
 		background-position: center;
 	}
 
@@ -19,12 +19,12 @@ figure {
 
 nav {
 	@include height-width(190px, 540px);
-	float: left;
+	@include float-clear(left);
 	text-align: right;
 
 	@include break() {
 		@include height-width(50px, inherit);
-		float: none;
+		@include float-clear(none);
 		text-align: center;
 	}
 
