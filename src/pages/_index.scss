@@ -2,18 +2,18 @@ header {
 	@include height-width(null, inherit);
 	clear: both;
 	text-align: center;
-	padding-top: 40px;
+	@include margin-padding(null, 40px 0 0 0);
 	
 	img {
 		max-width: 100%;
 		height: auto;
 		
-		@include break() {
-			margin-bottom: 100px;
+		@include break($device-tablet) {
+			@include margin-padding(0 0 100px 0, null);
 		}
 		
 		@include break($device-phone) {
-			margin-bottom: 80px;
+			@include margin-padding(0 0 80px 0, null);
 		}
 	}
 	
@@ -66,12 +66,12 @@ header {
 		line-height: 0;
 		margin-bottom: 50px;
 		
-		@include break() {
+		@include break($device-tablet) {
 			font-size: 1.5em;
 		}
 		
 		@include break($device-phone) {
-			color: #FFF;
+			color: $white;
 			font-size: 1em;
 		}
 	}
@@ -83,7 +83,7 @@ header {
 	@include height-width(130px, 100%);
 	background: $orange-2;
 	text-align: center;
-	margin: 0 auto;
+	@include margin-padding(0 auto, null);
 	
 	h1 {
 		color: $white;
@@ -106,10 +106,10 @@ header {
 
 #content {
 	@include height-width(null, $device-desktop + 1);
-	margin: 20px auto;
+	@include margin-padding(20px auto, null);
 
 	@include break() {
-		width: inherit;
+		@include height-width(null, inherit);
 	}
 	
 	h3 {
@@ -148,12 +148,12 @@ header {
 	#products, #testimonials {
 		@include break() {
 			@include height-width(null, 46%);
-			margin: 0 2%;
+			@include margin-padding(0 2%, null);	
 		}
 		
 		@include break($device-tablet) {
 			@include height-width(null, 96%);
-			margin: 0 2%;
+			@include margin-padding(0 2%, null);			
 			float: none;
 		}
 	}
@@ -163,7 +163,7 @@ header {
 	@include height-width(90px, 100%);
 	background: $white-2;
 	clear: both;
-	padding-top: 30px;
+	@include margin-padding(null, 30px 0 0 0);
 }
 
 @include break($device-phone) {

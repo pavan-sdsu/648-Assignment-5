@@ -3,14 +3,14 @@ footer {
 	background: $gray-2;
 	text-align: center;
 	color: $white;
-	padding-top: 50px;
+	@include margin-padding(null, 50px 0 0 0);
 
 	@include break($device-phone) {
 		text-align: center;
 
 		p, img {
 			float: none;
-			margin: 0;
+			@include margin-padding(0, null);
 		}
 	}
 }
@@ -18,13 +18,13 @@ footer {
 
 $social-count: one, two, three, four;
 
-.social-media {
-	margin: 0 auto;
+.social-media {	
+	@include margin-padding(0 auto, null);
 	@include height-width(null, 165px);
 	
 	div {
 		float: left;
-		margin-right: 5px;
+		@include margin-padding(0 5px 0 0, null);
 	}
 	
 	a {

@@ -1,12 +1,12 @@
 figure {
-	@include height-width(400px, 190px);
+	@include height-width(190px, 400px);
 	background: $logo no-repeat 0 50px;
 	float: left;
 	display: block;
-	margin: 0;
+	@include margin-padding(0, null);
 
 	@include break() {
-		@include height-width(inherit, 140px);
+		@include height-width(140px, inherit);
 		float: none;
 		background-position: center;
 	}
@@ -23,13 +23,13 @@ nav {
 	text-align: right;
 
 	@include break() {
-		@include height-width(inherit, 50px);
+		@include height-width(50px, inherit);
 		float: none;
 		text-align: center;
 	}
 
 	@include break($device-phone) {
-		margin-bottom: 40px !important;
+		@include margin-padding(0 0 40px 0 !important, null);
 	}
 
 	ul {

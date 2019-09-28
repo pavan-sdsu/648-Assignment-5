@@ -8,8 +8,7 @@ body {
 
 main {
 	@include height-width(null, $device-desktop + 1);
-	margin: 0 auto;
-	padding: 0 10px;
+	@include margin-padding(0 auto, 0 10px);
 
 	@include break() {
 		@include height-width(null, $device-tablet + 1);

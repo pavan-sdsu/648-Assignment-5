@@ -10,3 +10,9 @@
 	height: $height;
 	width: $width;
 }
+
+// Margin Padding Mixin
+@mixin margin-padding($margin: initial, $padding: initial) {
+	margin: $margin;
+	padding: $padding;
+}
