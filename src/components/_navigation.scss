@@ -1,33 +1,29 @@
 figure {
-	width: 400px;
-	height: 190px;
+	@include height-width(400px, 190px);
 	background: $logo no-repeat 0 50px;
 	float: left;
 	display: block;
 	margin: 0;
 
 	@include break() {
-		width: inherit;
-		height: 140px;
+		@include height-width(inherit, 140px);
 		float: none;
 		background-position: center;
 	}
 
 	@include break($device-phone) {
 		background-size: contain;
-		height: 100px;
+		@include height-width(100px, null);
 	}
 }
 
 nav {
-	width: 540px;
-	height: 190px;
+	@include height-width(190px, 540px);
 	float: left;
 	text-align: right;
 
 	@include break() {
-		width: inherit;
-		height: 50px;
+		@include height-width(inherit, 50px);
 		float: none;
 		text-align: center;
 	}

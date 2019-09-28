@@ -4,3 +4,9 @@
 		@content;
 	}
 }
+
+// Height Width Mixin
+@mixin height-width($height: auto, $width: auto) {
+	height: $height;
+	width: $width;
+}

@@ -7,19 +7,19 @@ body {
 }
 
 main {
-	width: 940px;
+	@include height-width(null, $device-desktop + 1);
 	margin: 0 auto;
 	padding: 0 10px;
 
 	@include break() {
-		width: 768px;
+		@include height-width(null, $device-tablet + 1);
 	}
 
 	@include break($device-tablet) {
-		width: 460px;
+		@include height-width(null, $device-phone + 1);
 	}
 
 	@include break($device-phone) {
-		width: 300px;
+		@include height-width(null, $device-phone-sm + 1);
 	}
 }
